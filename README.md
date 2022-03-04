@@ -65,6 +65,6 @@ Access the site through the link provided by the above command. Commonly: http:/
 -   The application certainly needs design done on the frontend
 -   The application tests covers all endpoints such as api/pokemons and api/pokemons:id
 -   The authentication on frontend is quite basic and is just for demonstrating functionality. I can improve this overtime
--   Editting a pokemon is not functional. This can be improved with time. I can also add redux to help in state preservation across pages.
+-   Editting a pokemon functionality does not work. Neither does the view a pokemon show details of the pokemons. This can be improved with time. I can also add redux to help in state preservation across pages.
 -   Calling a pokemon list can also be memoized to avoid expensive fetch operations on the site on page reload.
 -   The axios call can be be improved to attach the header automatically without having to write every request with header configuration
