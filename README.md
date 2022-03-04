@@ -14,21 +14,21 @@ For this application I created a function to populate the db automatically. Howe
 git clone https://github.com/philipokumu/pokemon-application.git
 ```
 
-#### Open project
+Open project
 
 ```
 cd pokemon-application
 ```
 
-#### I am using laravel, livewire and alpine js in this application
+I am using laravel and React JS in this application
 
-#### Install backend dependencies
+Install backend dependencies
 
 ```
 composer install
 ```
 
-#### Install frontend dependencies
+Install frontend dependencies
 
 ```
 npm install
@@ -36,22 +36,35 @@ npm install
 npm run prod
 ```
 
-#### Create a database for the project in your php localhost e.g. pokemon-api
+Create a database for the project in your php localhost e.g. pokemon-api
 
-#### Open .env file and ensure to setup DB_DATABASE, DB_USERNAME and DB_PASSWORD for your database according to your environment
+```
+Copy .env.example to .env
+```
 
-#### Migrate the database
+Open .env file and ensure to setup DB_DATABASE, DB_USERNAME and DB_PASSWORD for your database according to your environment
+
+Migrate the database
 
 ```
 php artisan migrate
 ```
 
-#### Empty the db you created in your local php environment and upload the file pockemon_api.sql found in the project folder
+Empty the db you created in your local php environment and upload the file pockemon_api.sql found in the project folder
 
-#### Start your server
+Start your server
 
 ```
 php artisan serve
 ```
 
-#### Access the site through the link provided by the above command. Commonly: http://127.0.0.1:8000
+Access the site through the link provided by the above command. Commonly: http://127.0.0.1:8000
+
+## Points of improvement in the application
+
+-   The application certainly needs design done on the frontend
+-   The application tests covers all endpoints such as api/pokemons and api/pokemons:id
+-   The authentication on frontend is quite basic and is just for demonstrating functionality. I can improve this overtime
+-   Editting a pokemon is not functional. This can be improved with time. I can also add redux to help in state preservation across pages.
+-   Calling a pokemon list can also be memoized to avoid expensive fetch operations on the site on page reload.
+-   The axios call can be be improved to attach the header automatically without having to write every request with header configuration
