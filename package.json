@@ -26,7 +26,6 @@
         "tailwindcss": "^3.0.23"
     },
     "dependencies": {
-        "react-data-table-component": "^7.4.7",
         "react-router-dom": "^6.2.2"
     }
 }

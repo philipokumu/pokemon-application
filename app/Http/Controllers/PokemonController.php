@@ -38,4 +38,37 @@ class PokemonController extends Controller
 
         return new PokemonResource($pokemon);
     }
+
+    public function calPoints($ops) {
+        $output_array = [];
+        for($i=0; $i<count($ops); $i++) {
+            echo $ops[$i];
+            if (is_numeric(intval($ops[$i]))){
+                array_push($output_array,(intval($ops[$i])));
+            } else if ($ops[$i]==='+') {
+                $total = $output_array[$i-1] + $output_array[$i-2];
+                array_push($output_array,$total);
+                
+            } else if (strval($ops[$i])=="D"){
+            // } else if (strcasecmp(strval($ops[$i]),'D')){
+                $doubled = $output_array[$i] *2;
+                dd($doubled);
+                array_push($output_array, $doubled);
+                
+            } else if ($ops[$i]==='C') {
+                array_pop($output_array);
+            }
+            // dd(array_sum($output_array));
+            // echo array_sum($output_array);
+            }
+        
+        }
+
+        public function callpnts(){
+        $ops = ['5','2','C','D','+'];
+        return $this->calPoints($ops);
+
+        }
+        
+        
 }

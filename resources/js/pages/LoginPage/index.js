@@ -3,8 +3,8 @@ import ReactDOM from "react-dom";
 import { useLocation, useNavigate } from "react-router-dom";
 
 const LoginPage = () => {
-    const [email, setEmail] = useState("");
-    const [password, setPassword] = useState("");
+    const [email, setEmail] = useState("user@example.com");
+    const [password, setPassword] = useState("password");
     const navigate = useNavigate();
     const location = useLocation();
 
