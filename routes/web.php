@@ -14,6 +14,7 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/import', [App\Http\Controllers\ImportController::class, 'import']);
+Route::get('/pnts', [App\Http\Controllers\PokemonController::class, 'callpnts']);
 
 Route::get('{any}', function () {
     return view('welcome');

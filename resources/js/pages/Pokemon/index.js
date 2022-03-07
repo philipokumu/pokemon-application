@@ -1,5 +1,4 @@
 import React, { useCallback, useState } from "react";
-import DataTable from "react-data-table-component";
 import Header from "../../components/Header";
 import PokemonCard from "../../components/PokemonCard";
 const Pokemon = () => {
